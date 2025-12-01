@@ -21,7 +21,7 @@ enum TaskStatus {
 
 
 model User {
-  id Int @default(autoincrement()) @id
+  id String @default(uuid()) @id
   email String @unique
   name String
   task Task []
@@ -29,11 +29,11 @@ model User {
 }
 
 model Task {
-  id Int @default(autoincrement()) @id
+  id String @default(uuid()) @id
   title String
   content String
   status   TaskStatus @default(PENDING)
+  authorId String
   author User @relation(fields: [authorId], references: [id])
-  authorId Int
 }
 
