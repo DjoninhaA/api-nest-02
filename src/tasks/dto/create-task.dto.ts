@@ -7,7 +7,7 @@ export class CreateTaskDTO {
   title: string;
 
   @IsString()
-  content?: string;
+  content: string;
 
   @IsEnum(TaskStatus)
   status: TaskStatus;
