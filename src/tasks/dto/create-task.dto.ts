@@ -1,4 +1,4 @@
-import { TaskStatus } from '@prisma/client';
+import { TaskStatus } from '../entities/task.entity';
 import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateTaskDTO {
