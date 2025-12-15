@@ -30,12 +30,12 @@ export class TasksController {
     return this.taskService.create(data, data.userId);
   }
 
-  @Patch()
+  @Patch(':id')
   update(@Param('id') id: string, @Body() data: UpdateTaskDto) {
     return this.taskService.update(id, data);
   }
 
-  @Delete()
+  @Delete(':id')
   remove(@Param('id') id: string) {
     return this.taskService.remove(id);
   }
