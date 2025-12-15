@@ -26,7 +26,7 @@ services:
       DATABASE_URL: 'postgresql://postgres:postgres@postgres:5432/nestdb?schema=public'
     ports:
       - '3000:3000'
-    command: sh -c "npx prisma migrate deploy && npm run start:prod"
+    command: sh -c "npx prisma migrate deploy && npm run start:dev"
 
 volumes:
   postgres_data:
